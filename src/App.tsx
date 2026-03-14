@@ -27,11 +27,10 @@ function App() {
       </label>
       <h3>Wybierz rodzaj płatności:</h3>
       <label>
-        Karta <input type="radio" name="payment" value="card"/><br/>
-        BLIK <input type="radio" name="payment" value="blik"/><br/>
-        Gotówka (przy kasie) <input type="radio" name="payment" value="cash"/><br/>
-      </label>
-      <button type="submit" className="submit-btn">Rezerwuję</button>
+        <img src="/karta.png" alt="karta" style={{ width: '30px',}} />Karta<input type="radio" name="payment" value="card"/><br/>
+        <img src="/blik.png" alt="blik" style={{ width: '40px',}} />BLIK<input type="radio" name="payment" value="blik"/><br/>
+      </label><br/>
+      <button type="submit" className="submit-button">Rezerwuję</button>
     </form>
   </div>
 </>
