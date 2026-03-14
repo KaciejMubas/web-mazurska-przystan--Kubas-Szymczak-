@@ -11,7 +11,7 @@ html{
   background: floralwhite;
   color: black;
   border-radius:20px;
-  box-shadow: 5px 10px white;
+  box-shadow: 0 5px 10px white;
   max-width: 1000px;
 }
 main{
@@ -23,12 +23,14 @@ div{
   margin-right: 100px;
 }
 button {
-  border: 1px solid black;
+  border: 1px solid palegoldenrod;
   background: darkgoldenrod;
   transition: 0.5s ease;
 }
 button:hover {
   background: goldenrod;
+  box-shadow: 0 0 25px gold;
+  border: 1px solid gold;
 }
 
 
