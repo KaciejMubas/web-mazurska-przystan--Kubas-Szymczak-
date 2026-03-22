@@ -47,6 +47,8 @@ function App() {
     setHasAgreed(event.target.checked);
     console.log(`Regulamin: ${event.target.checked}`);
   }
+
+  const totalCost = (boatPrice * hours) + (isInstructor ? 50 * hours : 0) + (isKapok ? 5 : 0);
   
   return (
 <>
@@ -79,6 +81,7 @@ function App() {
         Akceptuję regulamin
         <input type="checkbox" name="agreement" checked={hasAgreed} onChange={handleAgreementChange}/>
       </label><br/>
+      <h2>Do zapłaty: {totalCost} zł. </h2>
       <button type="submit" className="submit-button">Rezerwuję</button>
     </form>
   </div>
