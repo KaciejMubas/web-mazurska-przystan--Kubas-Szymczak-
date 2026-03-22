@@ -1,5 +1,5 @@
 import './App.css'
-import {type ChangeEvent, useState} from "react";
+import {type ChangeEvent, type SyntheticEvent, useState} from "react";
 
 function App() {
 
@@ -49,18 +49,33 @@ function App() {
   }
 
   const totalCost = (boatPrice * hours) + (isInstructor ? 50 * hours : 0) + (isKapok ? 5 : 0);
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const isSubmitDisabled = name.trim().length === 0 || !hasAgreed;
+  const handleSubmit = (event: SyntheticEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitted(true);
+  };
+  if (isSubmitted) {
+    return <p className="success-message">Dziękujemy za dokonanie rezerwacji!</p>;
+  }
+
+  if (boatPrice === 150) {
+    alert("Wymagany patent żeglarski!");
+  }
   
   return (
 <>
   <h1>Rezerwacja: Mazurska Przystań</h1>
   <div id={'container'}>
-    <form>
+    <form onSubmit={handleSubmit}>
       <label>Imie: <input type="text" name="name" placeholder="Imię" value={name} onChange={handleNameChange}/></label><br/>
       <label>Wybierz łódź: </label>
       <select value={boatPrice} onChange={handleBoatChange}>
         <option value="20">Kajak (20 zł/h)</option>
         <option value="35">Rower wodny (35 zł/h)</option>
-        <option value="150">Jacht Omega (150 zł/h)</option>
+        <option value="150">Żaglówka Omega (150 zł/h)</option>
       </select><br/>
       <label>Liczba godzin: </label>
       <input type="range" min="1" max="8" value={hours} onChange={handleHoursChange} /><br/>
@@ -82,7 +97,7 @@ function App() {
         <input type="checkbox" name="agreement" checked={hasAgreed} onChange={handleAgreementChange}/>
       </label><br/>
       <h2>Do zapłaty: {totalCost} zł. </h2>
-      <button type="submit" className="submit-button">Rezerwuję</button>
+      <button type="submit" className="submit-button" disabled={isSubmitDisabled}>Rezerwuję</button>
     </form>
   </div>
 </>
