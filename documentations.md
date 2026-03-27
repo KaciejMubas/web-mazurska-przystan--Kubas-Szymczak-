@@ -68,8 +68,8 @@ Wymień co najmniej 3 właściwości CSS).
 ## 6. Wnioski z realizacji projektu (SDLC)
 (Krótka autorefleksja zespołu).
 * **Co było najtrudniejsze?** Stworzenie funkcji zatwierdzania strony
-* **Czego nowego się nauczyliście?** [WPISZ TUTAJ]
-* **Co byście zmienili, gdybyście mieli więcej czasu?** [WPISZ TUTAJ]
+* **Czego nowego się nauczyliście?** dokumentacji kodu...
+* **Co byście zmienili, gdybyście mieli więcej czasu?** nic, ponieważ nasza mazurska przystań jest doskonała :D
 ---
 ## 7. Checklisty (Zaznacz [x])
 - [x] Aplikacja uruchamia się bez błędów (npm start).
