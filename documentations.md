@@ -61,9 +61,9 @@ Możesz użyć pseudokodu lub wzoru matematycznego).
 ## 5. Layout i Stylizacja (`Flexbox`)
 (Opisz, jakich właściwości `Flexbox` użyliście, aby formularz był responsywny i wyśrodkowany.
 Wymień co najmniej 3 właściwości CSS).
-1. `display: ...` - (opis zastosowania)
-2. `...` - (opis zastosowania)
-3. `...` - (opis zastosowania)
+1. `display:` - (Aktywuje model Flexbox dla kentenera, zamieniając jego dzieci w elastyczne elementy )
+2. `---` - (-)
+3. `---` - (-)
 ---
 ## 6. Wnioski z realizacji projektu (SDLC)
 (Krótka autorefleksja zespołu).
